@@ -1,4 +1,4 @@
-FLAG = -Wall -Werror -Wextra
+FLAG = -c -Wall -Werror -Wextra
 
 NAME = libftprintf.a
 
@@ -19,7 +19,7 @@ RM = rm -f
 all: $(NAME)
 
 $(NAME): $(OBJ)
-		ar rcsv $(NAME) $(OBJ)
+		ar cr $(NAME) $(OBJ)
 
 .c.o:
 		$(CC) $(FLAG) -g -c $< -o ${<:.c=.o}

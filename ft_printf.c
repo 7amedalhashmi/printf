@@ -19,11 +19,10 @@ int		ft_printf(const char *c, ...)
 	va_end(arg);
 	return (0);
 }
-
-int main()
-{
-	char b;
-	b = 42;
-	ft_printf("FAKE: My age is %p but the most %s is the: #-%d %u\n", &b ,"19", 35, 20);
-	printf("REAL: My age is %p but the most %s is the: #-%d %u\n", &b, "19", 35, 20);
-}
+// int main()
+// {
+// 	char b;
+// 	b = 42;
+// 	ft_printf("FAKE: My age is %p but the most %s is the: #-%d %u\n", &b ,"19", 35, 20);
+// 	printf("REAL: My age is %p but the most %s is the: #-%d %u\n", &b, "19", 35, 20);
+// }
