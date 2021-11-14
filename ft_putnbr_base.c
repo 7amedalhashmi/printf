@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "libftprintf.h"
 
 int	check_base(char *base)
 {

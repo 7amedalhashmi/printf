@@ -1,6 +1,6 @@
 FLAG = -Wall -Werror -Wextra
 
-NAME = printf.a
+NAME = libftprintf.a
 
 SRC = ft_printf.c \
 		ft_printf_dt.c \
