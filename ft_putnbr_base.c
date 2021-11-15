@@ -27,7 +27,7 @@ int	check_base(char *base)
 	return (1);
 }
 
-void	ft_putnbr_base(int nbr, char *base)
+void	ft_putnbr_base(int nbr, char *base, int *len)
 {
 	int	size_base;
 	int	nbr_final[100];
@@ -40,7 +40,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		if (nbr < 0)
 		{
 			nbr = -nbr;
-			ft_putchar('-');
+			ft_putchar('-', len);
 		}
 		while (base[size_base])
 			size_base++;
@@ -51,6 +51,6 @@ void	ft_putnbr_base(int nbr, char *base)
 			i++;
 		}
 		while (--i >= 0)
-			ft_putchar(base[nbr_final[i]]);
+			ft_putchar((base[nbr_final[i]]), len);
 	}
 }

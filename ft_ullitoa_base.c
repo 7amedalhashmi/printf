@@ -1,6 +1,6 @@
 #include "libftprintf.h"
 
-void    ft_ullitoa_base(unsigned long long int n, char *base)
+void    ft_ullitoa_base(unsigned long long int n, char *base, int *i)
 {       
         char                    *a;
         unsigned long long int  nbr;
@@ -13,7 +13,7 @@ void    ft_ullitoa_base(unsigned long long int n, char *base)
         while (n /= b_len)
                 size++; 
         if (!(a = (char *)malloc(size + 1)))
-        	return ;        //return (0);
+        	return ;
         a[size--] = '\0';
         while (nbr > 0)
         {       
@@ -24,8 +24,9 @@ void    ft_ullitoa_base(unsigned long long int n, char *base)
                 a[0] = '0';
 	while (a >= 0)
 	{
-		//ft_putstr("0x");
+                //ft_putchar(*a, i);
 		write(1, a, ft_strlen(a));
+                *i += ft_strlen(a);
 		return ;
 	}
 }
