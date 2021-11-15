@@ -22,11 +22,11 @@ void    ft_ullitoa_base(unsigned long long int n, char *base, int *i)
         }
         if (size == 0 && a[1] == '\0')
                 a[0] = '0';
-	while (a >= 0)
+	if (a >= 0)
 	{
                 //ft_putchar(*a, i);
 		write(1, a, ft_strlen(a));
                 *i += ft_strlen(a);
-		return ;
 	}
+        free(a);
 }

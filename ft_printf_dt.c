@@ -16,9 +16,9 @@ int	ft_printf_dt(const char *c, va_list arg)
 	else if (*c == 's')
 		ft_putstr(va_arg(arg, char *), &i);
 	else if (*c == 'x')
-		ft_putnbr_base((va_arg(arg, unsigned int)), "0123456789abcdef", &i);
+		ft_ullitoa_base((va_arg(arg, unsigned int)), "0123456789abcdef", &i);
 	else if (*c == 'X')
-		ft_putnbr_base((va_arg(arg, unsigned int)), "0123456789ABCDEF", &i);
+		ft_ullitoa_base((va_arg(arg, unsigned int)), "0123456789ABCDEF", &i);
 	else if (*c == 'p')
 	{
 		ft_putstr("0x", &i);
