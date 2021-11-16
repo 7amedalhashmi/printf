@@ -30,7 +30,7 @@ int	check_base(char *base)
 void	ft_putnbr_base(int nbr, char *base, int *len)
 {
 	int	size_base;
-	int	nbr_final[100];
+	//int	nbr_final[100];
 	int	i;
 
 	i = 0;
@@ -44,13 +44,20 @@ void	ft_putnbr_base(int nbr, char *base, int *len)
 		}
 		while (base[size_base])
 			size_base++;
-		while (nbr)
+		if (nbr < size_base)
+			ft_putchar(base[nbr], len);
+		if (nbr >= size_base)
 		{
-			nbr_final[i] = nbr % size_base;
-			nbr = nbr / size_base;
-			i++;
+			ft_putnbr_base(nbr / size_base, base, len);
+			ft_putnbr_base(nbr % size_base, base, len);
 		}
-		while (--i >= 0)
-			ft_putchar((base[nbr_final[i]]), len);
+		// while (nbr)
+		// {
+		// 	nbr_final[i] = nbr % size_base;
+		// 	nbr = nbr / size_base;
+		// 	i++;
+		// }
+		// while (--i >= 0)
+		// 	ft_putchar((base[nbr_final[i]]), len);
 	}
 }
