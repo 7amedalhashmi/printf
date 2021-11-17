@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: halhashm <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/16 15:37:37 by halhashm          #+#    #+#             */
+/*   Updated: 2021/11/17 12:36:28 by halhashm         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFTPRINTF_H
 # define LIBFTPRINTF_H
 # include <unistd.h>
@@ -11,8 +23,8 @@ void	ft_putnbr_base(int nbr, char *base, int *len);
 void	ft_putnbr(int n, int *i);
 void	ft_putstr(char *s, int *i);
 size_t	ft_strlen(const char *c);
-void    ft_ullitoa_base(unsigned long long int n, char *base, int *i);
+void	ft_ullitoa_base(unsigned long long int n, char *base, int *i);
 int		ft_printf(const char *c, ...);
-int     ft_printf_dt(const char *c, va_list arg);
+int		ft_printf_dt(const char *c, va_list arg);
 
 #endif

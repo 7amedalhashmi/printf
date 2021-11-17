@@ -1,6 +1,18 @@
-# include "libftprintf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: halhashm <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/16 15:35:27 by halhashm          #+#    #+#             */
+/*   Updated: 2021/11/17 12:34:33 by halhashm         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int		ft_printf(const char *c, ...)
+#include "libftprintf.h"
+
+int	ft_printf(const char *c, ...)
 {
 	va_list	arg;
 	int		i;
@@ -21,13 +33,3 @@ int		ft_printf(const char *c, ...)
 	va_end(arg);
 	return (i);
 }
-// int main()
-// {
-// 	char b;
-// 	int len;
-// 	int mylen;
-// 	b = 42;
-// 	mylen = ft_printf("FAKE: My age is %p but the most %s is the: #-%d %u\n", &b ,"19", 35, 20);
-// 	len = printf("REAL: My age is %p but the most %s is the: #-%d %u\n", &b, "19", 35, 20);
-// 	printf("%d \n %d", mylen, len);
-// }
